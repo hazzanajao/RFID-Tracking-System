@@ -5,6 +5,7 @@ import com.rfidDevExpertHub.rfidTrackingSystems.model.TagScanLog;
 import com.rfidDevExpertHub.rfidTrackingSystems.repository.TagRepository;
 import com.rfidDevExpertHub.rfidTrackingSystems.repository.TagScanLogRepository;
 import com.rfidDevExpertHub.rfidTrackingSystems.exception.ResourceNotFoundException;
+import com.rfidDevExpertHub.rfidTrackingSystems.reader.SerialPortReader;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,10 @@ public class TagScanService {
     @Autowired
     private TagScanLogRepository tagScanLogRepository;
 
+    @Autowired
+    private SerialPortReader reader;
+
+    // Manual scan via API
     public Tag processScan(String tagId, String location) {
         Tag tag = tagRepository.findById(tagId)
                 .orElseThrow(() -> new ResourceNotFoundException("Tag not found: " + tagId));
@@ -36,5 +41,12 @@ public class TagScanService {
         tagScanLogRepository.save(log);
 
         return tag;
+    }
+
+    // Auto scan using SerialPortReader
+    public Tag autoScan() {
+        String tagId = reader.readTagId();
+        String location = reader.readLocation();
+        return processScan(tagId, location);
     }
 }
