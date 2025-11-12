@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface TagScanLogRepository extends JpaRepository<TagScanLog, Long> {
-    List<TagScanLog> findByTagId(String tagId);
+
+    List<TagScanLog> findByTagIdOrderByTimestampDesc(String tagId);
 }
