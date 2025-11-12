@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.rfidDevExpertHub.rfidTrackingSystems.repository;
 
-import com.example.demo.model.Tag;
+import com.rfidDevExpertHub.rfidTrackingSystems.model.Tag;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.rfidDevExpertHub.rfidTrackingSystems.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
