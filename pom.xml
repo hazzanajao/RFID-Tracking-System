@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.rfiddevexperthub</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>rfidtrackingsystem</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>rfidtrackingsystem</name>
+    <description>This is a real-time tracking systems that Logs tag reads with timestamp and location, expose via REST</description>
     <url/>
     <licenses>
         <license/>
