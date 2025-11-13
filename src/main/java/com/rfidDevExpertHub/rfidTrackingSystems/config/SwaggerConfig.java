@@ -14,6 +14,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("RFID Asset Tracking API")
                         .version("1.0")
-                        .description("REST API for managing RFID tags and scans"));
+                        .description("REST API for managing RFID tags and scans developed by Ajao Hazzan")
+                );
     }
 }

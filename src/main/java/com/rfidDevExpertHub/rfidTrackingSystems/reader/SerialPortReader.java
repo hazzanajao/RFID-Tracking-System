@@ -9,19 +9,30 @@ import java.util.Random;
  * We can later replace this with a hardware-based
  * version using jSerialComm or similar libraries
  * ***********************************************************/
-@Component
+
 public class SerialPortReader {
 
-    private final String[] mockTagIds = {"TAG001", "TAG002", "TAG003", "TAG004"};
-    private final String[] mockLocations = {"Warehouse A", "Dock B", "Zone C"};
+    private String port;
+    private int baudRate;
+
+    // ✅ Constructor with parameters
+    public SerialPortReader(String port, int baudRate) {
+        this.port = port;
+        this.baudRate = baudRate;
+        // Initialize serial connection here if needed
+    }
+
+    // Optional: default constructor for Spring autowiring
+    public SerialPortReader() {
+        this.port = "COM3";
+        this.baudRate = 9600;
+    }
 
     public String readTagId() {
-        Random random = new Random();
-        return mockTagIds[random.nextInt(mockTagIds.length)];
+        return "TAG001"; // Simulated read
     }
 
     public String readLocation() {
-        Random random = new Random();
-        return mockLocations[random.nextInt(mockLocations.length)];
+        return "Warehouse A"; // Simulated location
     }
 }

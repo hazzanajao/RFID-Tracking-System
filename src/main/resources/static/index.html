@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <h1>Project Developer Ajao Hazzan</h1>
+    <title>RFID Asset Tracking System</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
+        h1, h2 { color: #2c3e50; }
+        a { color: #2980b9; text-decoration: none; }
+        ul { margin-top: 1rem; }
+        code { background: #eaeaea; padding: 2px 4px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<h1>RFID Asset Tracking System</h1>
+<p>This project demonstrates a full-stack RFID tracking solution built with Spring Boot and React.</p>
+
+<h2>Backend API Development</h2>
+<p>We designed and implemented RESTful endpoints to manage RFID tags and scan logs:</p>
+<ul>
+    <li><code>POST /api/tags</code> — Create new RFID tags</li>
+    <li><code>GET /api/tags</code> — Retrieve all tags</li>
+    <li><code>GET /api/tags/{id}</code> — Fetch tag by ID</li>
+    <li><code>POST /api/scan</code> — Log manual scans</li>
+    <li><code>POST /api/scan/auto</code> — Simulate scans via SerialPortReader</li>
+</ul>
+<p>Explore the API using <a href="/swagger-ui/index.html">Swagger UI</a>.</p>
+
+<h2>Tag Label Testing</h2>
+<p>We performed simulated tag label testing using mock serial port data. This allowed us to validate:</p>
+<ul>
+    <li>Tag ID recognition and location mapping</li>
+    <li>Scan logging and timestamp accuracy</li>
+    <li>Lifecycle updates for active/inactive assets</li>
+</ul>
+
+<h2>Lifecycle Management</h2>
+<p>We managed the entire RFID software development lifecycle:</p>
+<ul>
+    <li><strong>Project Planning:</strong> Defined scope, endpoints, and data models</li>
+    <li><strong>Architecture Design:</strong> Modular Spring Boot layers (model, repository, service, controller)</li>
+    <li><strong>Software Development:</strong> Built secure, testable REST APIs with Swagger documentation</li>
+    <li><strong>Testing:</strong> Verified endpoints via Swagger and Postman, seeded sample data for validation</li>
+</ul>
+
+
+<h2>Frontend (React + Material UI)</h2>
+<p>Responsive dashboard with:</p>
+<ul>
+    <li>Tag summary cards (total, active, inactive)</li>
+    <li>Bar chart of tag activity by location</li>
+    <li>Table of recent assets</li>
+    <li>Navigation to Swagger, GitHub, Postman</li>
+</ul>
+<p>Built with:</p>
+<ul>
+    <li>React Router</li>
+    <li>Axios for API calls</li>
+    <li>Material UI components</li>
+    <li>Chart.js or Recharts for data visualization</li>
+</ul>
+</body>
+</html>
