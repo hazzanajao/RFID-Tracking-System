@@ -15,7 +15,7 @@ public class SerialPortReader {
     private String port;
     private int baudRate;
 
-    // ✅ Constructor with parameters
+    //  Constructor with parameters
     public SerialPortReader(String port, int baudRate) {
         this.port = port;
         this.baudRate = baudRate;
